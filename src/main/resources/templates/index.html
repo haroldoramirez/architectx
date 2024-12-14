@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Architect X</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="icon" sizes="192x192" href="/images/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+<link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+	<header>
+		<h1>Architect X</h1>
+	</header>
+
+	<div class="about-section">
+		<h1>About Us</h1>
+		<p>Frontend or Backend cases from dev life</p>
+	</div>
+
+	<h2 style="text-align: center">Must See</h2>
+
+	<div class="row">
+		<div th:each="card: ${cards}" class="card-column">
+			<div class="card">
+				<img th:src="${card.urlImage}" th:alt="${card.imageAlt}" style="width: 100%">
+				<div class="card-container">
+					<h2 th:text="${card.title}">Card Title</h2>
+					<p th:text="${card.subtitle}" class="card-title">Card Subtitle</p>
+					<p th:text="${card.description}">Card Description</p>
+					<p>
+						<button class="card-button" th:data-url="${card.urlPage}" onclick="accessPage(this.getAttribute('data-url'))">
+    						Access
+						</button>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<p>&copy; 2025 - <a href="https://about.me/haroldoramirez" target="_blank">Haroldo Ramirez da Nobrega</a>. All rights reserved.</p>
+	</footer>
+	
+	<script type="text/javascript">
+		function accessPage(page) {
+			window.location.href="form-validation";
+		}
+	</script>
+</body>
+
+</html>
