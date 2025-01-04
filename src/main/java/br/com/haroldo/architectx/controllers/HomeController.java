@@ -15,7 +15,7 @@ public class HomeController {
 	@GetMapping("/")
 	public String home(Model model) {
 		
-		List<Card> cards = criarCards();
+		List<Card> cards = createCards();
 		
 		model.addAttribute("cards", cards);
 		
@@ -28,7 +28,7 @@ public class HomeController {
 		return "formValidation";
 	}
 	
-	private List<Card> criarCards() {
+	private static List<Card> createCards() {
 		
 		List<Card> cards = new ArrayList<>();
 				

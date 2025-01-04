@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class Card {
 	
+	private long id;
 	private String urlImage;
 	private String imageAlt;
 	private String title;

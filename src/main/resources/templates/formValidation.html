@@ -16,8 +16,86 @@
 		<h1>Architect X</h1>
 	</header>
 
-	<h2 style="text-align: center">Form validations</h2>
-	
+	<h2 style="text-align: center">Form validations Jquery</h2>
+
+	<section>
+		<form id="formValidation" autocomplete="off"
+			novalidate="novalidate">
+
+			<div class="row">
+
+				<div class="col-md-3">
+					<label class="w-100" for="codigo">C&oacute;digo <span>*</span></label>
+					<input id="codigo" name="codigo" value="76314">
+				</div>
+
+				<div class="col-md-3">
+					<label class="w-100" for="cpfCnpj">CPF/CNPJ <span>*</span></label>
+					<input id="cpfCnpj" name="cpfCnpj" value="05670956907">
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-md-3">
+					<label class="w-100" for="nome">Nome <span>*</span></label> 
+					<input id="nome" name="nome" value="Haroldo Ramirez da Nobrega">
+				</div>
+
+				<div class="col-md-3">
+					<label class="w-100" for="email">Email <span>*</span></label> 
+					<input id="email" name="email" value="haroldo@email.com">
+				</div>
+
+				<div class="col-md-3">
+					<label class="w-100" for="telefone">N&uacute;mero de Telefone <span>*</span>
+					</label> <input id="telefone" name="telefone" value="45999992222">
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-md-3">
+					<label class="w-100" for="aceite">Participar? <span>*</span> </label>
+					<select name="aceite" id="aceite">
+						<option value="0">N&atilde;o</option>
+						<option selected value="1">Sim</option>
+					</select>
+				</div>
+
+			</div>
+			
+			<div id="divMensagens">
+			
+				<div class="row">
+					<div class="col-md-8">
+					
+						<div id="mensagem-inclusao-success" class="alert alert-success" style="display: none;">
+							<span class="message"><strong>Inclus&atilde;o</strong> realizada com sucesso.</span>
+						</div>
+						<div id="mensagem-erro" class="alert alert-danger" style="display: none;">
+							<span class="message"><strong>Ocorreu um erro ao incluir.</strong></span>
+						</div>
+					
+					</div>
+				
+				</div>
+		
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-12 pt-3 mb-3">
+					<button type="submit" id="salvar" name="Salvar"
+						class="btn btn-primary">Save</button>
+				</div>
+			</div>
+			
+		</form>
+	</section>
+
+	<br>
 	<button onclick="home()" class="button">to Home</button>
 
 	<footer>
